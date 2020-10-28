@@ -1,0 +1,79 @@
+<ion-header [translucent]="true">
+  <ion-toolbar id="header" color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+      Reporte Detallado
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true" id="pag">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle> 
+        Detalles del oximetro {{aplicacion.idoximetro}}
+      </ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list id="datos">
+        <ion-item id="pos">
+          <ion-col size="6">
+            <ion-label color="secondary">Paciente</ion-label>
+          </ion-col>
+          <ion-col id="pos">
+            <ion-label>{{aplicacion.paciente}}</ion-label> 
+          </ion-col>        
+        </ion-item>
+        <ion-item id="tam">
+          <ion-col size="6">
+            <ion-label color="secondary">Oxigenacion</ion-label>
+          </ion-col>
+          <ion-col id="pos">
+            <ion-label>{{aplicacion.oxigenacion}}  </ion-label> 
+          </ion-col>
+        </ion-item>
+        <ion-item id="tam">
+          <ion-col size="6">
+            <ion-label color="secondary">Hora</ion-label>
+          </ion-col>    
+          <ion-col id="pos">
+             <ion-label>{{aplicacion.hora}}</ion-label> 
+          </ion-col>           
+        </ion-item>
+        <ion-item id="tam">
+          <ion-col size="6">
+            <ion-label color="secondary">Calibracion</ion-label>
+          </ion-col>
+          <ion-col id="pos">
+            <ion-label>{{aplicacion.calibracion}}</ion-label> 
+          </ion-col>
+        </ion-item>
+        <ion-item id="tam">
+          <ion-col size="6">
+            <ion-label color="secondary">Fecha Inicio</ion-label>
+          </ion-col> 
+          <ion-col id="pos">
+            <ion-label>{{aplicacion.fechaInicio}}</ion-label>
+          </ion-col>       
+        </ion-item>
+
+      </ion-list>
+    </ion-card-content>
+    </ion-card>
+
+
+
+  <ion-card id="cardMapa">
+  <ion-card-header>
+    <ion-card-subtitle> 
+      UBICACION DEL OXIMETRO
+    </ion-card-subtitle>
+  </ion-card-header>
+    <ion-card-content id="map">
+     <div id="mapa"></div>
+    </ion-card-content> 
+  </ion-card>
+
+
+</ion-content>

@@ -1,0 +1,29 @@
+ion-content{
+  --background: url('../../assets/imagenNUBE.png') repeat center;
+}
+#header{
+  color: rgb(252, 252, 252);
+  font-size: 10;
+}
+
+#imagenes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#centrado{
+  font-size: 75%;
+  display: flex;
+  justify-content: center;
+}
+
+#tamanioImg{
+  height: 25%;
+  width: 25%;
+}
+
+#icono{
+  font-size: 150%;
+}
+

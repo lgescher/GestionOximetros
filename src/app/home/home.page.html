@@ -1,0 +1,54 @@
+<ion-header>
+  <ion-toolbar id="header" color="primary">
+    <ion-title>
+      Sistema de gestión
+    </ion-title>
+    <ion-title>
+      de oxímetros
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        Equipos registrados
+      </ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list>
+        <ion-item id="fila">
+          <ion-col size="3.2" id="centrado">
+            <ion-label color='secondary'>Ingreso</ion-label>
+          </ion-col>
+          <ion-col id="centrado">
+            <ion-label color='secondary'>Paciente</ion-label>
+          </ion-col>
+          <ion-col id="centrado">
+            <ion-label color='secondary'>Oxímetro</ion-label>
+          </ion-col>
+          <ion-col id="centrado">
+            <ion-label color='secondary'>Calibración</ion-label>
+          </ion-col>
+        </ion-item>
+        <ion-item *ngFor="let aplic of aplicaciones" [routerLink]="['/home', aplic.id]">
+          <ion-col size="3.2" id="centrado">
+            <ion-label>{{aplic.fechaInicio}}</ion-label>
+          </ion-col>
+          <ion-col id="centrado">
+            <ion-label>{{aplic.paciente}}</ion-label>
+          </ion-col>
+          <ion-col id="centrado">
+            <ion-label>{{aplic.idoximetro}}</ion-label>
+          </ion-col>
+          <ion-col id="centrado">
+            <ion-label>{{aplic.calibracion}}</ion-label>
+          </ion-col>
+          <ion-col id="centrado">            
+          </ion-col>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
